@@ -1,0 +1,20 @@
+<app-inputlist
+  *ngFor = "let item of data"
+  [data] = "item"
+  (OnSelected) = "selectID($event)"
+  (OnSelected2) = "select($event)"
+></app-inputlist>
+
+<div>
+  <input type="text" #id>
+</div>
+
+<div >
+  <input type="text" #name>
+</div>
+
+<div>
+  <input type="text" #des>
+</div>
+
+<button (click)= "additem(id.value, name.value, des.value)" >Add</button>
